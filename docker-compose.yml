@@ -45,6 +45,8 @@ services:
     volumes:
       - ./screenshots:/app/screenshots
       - ./reports:/app/reports
+    # Limit memory usage to avoid hogging resources on my dev machine
+    mem_limit: 512m
     networks:
       - pentagi-network
 
