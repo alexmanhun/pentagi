@@ -47,7 +47,8 @@ services:
       - ./reports:/app/reports
     # Limit memory usage to avoid hogging resources on my dev machine
     # Bumped from 512m - was hitting OOM during longer agent runs
-    mem_limit: 768m
+    # Bumped again to 1g - 768m still occasionally OOMs on multi-step tasks
+    mem_limit: 1g
     networks:
       - pentagi-network
 
