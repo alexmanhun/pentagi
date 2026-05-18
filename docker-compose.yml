@@ -49,6 +49,8 @@ services:
     # Bumped from 512m - was hitting OOM during longer agent runs
     # Bumped again to 1g - 768m still occasionally OOMs on multi-step tasks
     mem_limit: 1g
+    # Cap CPU so the backend doesn't starve my other dev containers
+    cpus: '1.5'
     networks:
       - pentagi-network
 
