@@ -67,7 +67,8 @@ services:
     depends_on:
       - backend
     ports:
-      - "${FRONTEND_PORT:-3000}:80"
+      # Using 3001 locally since port 3000 is taken by another project on my machine
+      - "${FRONTEND_PORT:-3001}:80"
     networks:
       - pentagi-network
 
