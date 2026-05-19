@@ -69,6 +69,9 @@ services:
     ports:
       # Using 3001 locally since port 3000 is taken by another project on my machine
       - "${FRONTEND_PORT:-3001}:80"
+    # Keep memory footprint small - nginx serving static files doesn't need much
+    mem_limit: 256m
+    cpus: '0.5'
     networks:
       - pentagi-network
 
