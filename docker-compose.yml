@@ -78,6 +78,11 @@ services:
 volumes:
   postgres_data:
     driver: local
+    # Store postgres data in a named volume under my projects directory for easier backup
+    driver_opts:
+      type: none
+      o: bind
+      device: ${POSTGRES_DATA_PATH:-./data/postgres}
 
 networks:
   pentagi-network:
