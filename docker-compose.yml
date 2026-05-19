@@ -87,3 +87,7 @@ volumes:
 networks:
   pentagi-network:
     driver: bridge
+    # Use a fixed subnet to avoid conflicts with other docker networks on my machine
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
