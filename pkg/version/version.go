@@ -47,6 +47,9 @@ func Get() Info {
 }
 
 // String returns a human-readable version string.
+// Example output:
+//
+//	pentagi version 0.1.0 (commit: abc1234, built: 2024-01-01, go: go1.22.0, platform: linux/amd64)
 func (i Info) String() string {
 	return fmt.Sprintf(
 		"pentagi version %s (commit: %s, built: %s, go: %s, platform: %s)",
